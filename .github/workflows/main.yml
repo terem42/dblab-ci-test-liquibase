@@ -1,0 +1,26 @@
+on: [ push ]
+
+jobs:
+  migration_job:
+    runs-on: ubuntu-latest
+    name: CI migration
+    steps:
+      - name: DB migration with DLE
+        uses: agneum/migration-action@v0.0.7
+        id: db-migration
+        with:
+          dbname: test
+          commands:  |
+            liquibase --changeLogFile=/repo/dbmigration/changelog.xml
+            --classpath=/liquibase/changelog
+            --url=jdbc:postgresql://${PGPORT}/${PGDATABASE}
+            --username=${PGUSER}
+            --password=${PGPASSWORD}
+            update
+          migration_envs: |
+            DATABASE_LAB_CI=true
+        env:
+          CI_ENDPOINT: ${{ secrets.CI_ENDPOINT }}
+          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
+      - name: Get the response status
+        run: echo "${{ steps.db-migration.outputs.response }}"
