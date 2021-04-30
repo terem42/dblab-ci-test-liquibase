@@ -5,6 +5,6 @@ BEGIN;
 
 ALTER TABLE hero_data.hero DROP CONSTRAINT pk_hero_id;
 
-select pg_sleep(5);
+select pg_sleep(15);
 
 ROLLBACK;
