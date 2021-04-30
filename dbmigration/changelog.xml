@@ -5,6 +5,6 @@
     xsi:schemaLocation="https://www.liquibase.org/xml/ns/dbchangelog
     https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
-  <include file="00010_create_hero_schema.postgresql.sql" />
+  <includeAll path="sql" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>
