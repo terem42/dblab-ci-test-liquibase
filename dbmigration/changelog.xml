@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>  
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="https://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.liquibase.org/xml/ns/dbchangelog
+    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
-<databaseChangeLog  
-        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"  
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"  
-        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
-        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.3.xsd">  
-
-	<includeAll path="sql" relativeToChangelogFile="true"/>
+  <includeAll path="sql" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>
