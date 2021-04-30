@@ -11,7 +11,7 @@ jobs:
         with:
           dbname: test
           commands:  |
-            liquibase --changeLogFile=/repo/dbmigration/changelog.xml --classpath=/liquibase/changelog --url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE} --username=${PGUSER} --password=${PGPASSWORD} --logLevel=debug update
+            liquibase --classpath=/repo/dbmigration/ --changeLogFile=changelog.xml --url=jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE} --username=${PGUSER} --password=${PGPASSWORD} --logLevel=debug update
           migration_envs: |
             DATABASE_LAB_CI=true
         env:
