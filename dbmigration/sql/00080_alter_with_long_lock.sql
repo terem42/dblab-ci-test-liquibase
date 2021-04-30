@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset vitaliy:00080_alter_with_long_lock splitStatements:true endDelimiter:;
+--changeset vitaliy:00080_alter_with_long_lock
 
 BEGIN;
 
